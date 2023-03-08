@@ -1,3 +1,5 @@
+El proyecto se inicializa con 'npm run dev'
+
 Resolución de Desafío
 
 Configuraciones Iniciales
