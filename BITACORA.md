@@ -29,6 +29,7 @@ Componente ProductDisplay
 
 Componente CardA(2/2)
 1. Se agrega un onClick al botón de agregar al carrito, este va a despachar la función addToCart(producto) y se actualizará el estado del carrito.
+2. Se controla la situación en donde el usuario clickee más de dos veces en 'agregar al carrito'. En caso que ya haya realizado un click y se haya despachado la acción, los siguientes clickeos no despacharán la acción y no habrá productos repetidos en el carrito.
 
 Componente Cart
 1. Traemos la información sobre los productos que se encuentran en el carrito. Si este está vacío, avisara al usuario sobre ello. Caso contrario mapeará todos los productos se encuentren en la cart por una CardB pasandole las siguientes props: id, name, image, price, stock.

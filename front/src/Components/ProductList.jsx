@@ -16,7 +16,7 @@ function ProductList() {
   return (
     <div>
       <NavBar/>
-      Electronics
+      <h2>Electronics</h2>
       {productList.length && productList.map(product => (<CardA
         key={product._id}
         id={product._id}

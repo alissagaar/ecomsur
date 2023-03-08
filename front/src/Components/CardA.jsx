@@ -3,10 +3,15 @@ import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar, faStarHalfStroke, faCartShopping} from '@fortawesome/free-solid-svg-icons'
 import { addToCart } from '../Redux/actions'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 
 function CardA({id, name, image, brand, price, stock, rating, numReviews}) {
   const dispatch = useDispatch()
+
+  //Checking there is no repeated item in the cart
+  const cart = useSelector(state => state.cart)
+  const repeated = cart.find(product => product.id === id)
+
   return (
     <div>
       {/* <img src={`http://localhost:5000${image}`} alt={image} /> */}
@@ -19,7 +24,9 @@ function CardA({id, name, image, brand, price, stock, rating, numReviews}) {
       <div>
         <h4>USD {price}</h4>
         {stock===0 ? 
-        <button disabled><FontAwesomeIcon icon={faCartShopping} /></button> : <button><FontAwesomeIcon icon={faCartShopping} onClick={()=>dispatch(addToCart({id, name, image, price, stock}))} /></button>}
+        <button disabled><FontAwesomeIcon icon={faCartShopping} />&nbsp;&nbsp;ADD TO CART</button> : 
+        repeated ? <button><FontAwesomeIcon icon={faCartShopping} />&nbsp;&nbsp;ADD TO CART</button>:
+        <button onClick={()=>dispatch(addToCart({id, name, image, price, stock}))}><FontAwesomeIcon icon={faCartShopping}/>&nbsp;&nbsp;ADD TO CART</button>}
       </div>
     </div>
   )
