@@ -2,8 +2,11 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar, faStarHalfStroke, faCartShopping} from '@fortawesome/free-solid-svg-icons'
+import { addToCart } from '../Redux/actions'
+import { useDispatch } from 'react-redux'
 
 function CardA({id, name, image, brand, price, stock, rating, numReviews}) {
+  const dispatch = useDispatch()
   return (
     <div>
       {/* <img src={`http://localhost:5000${image}`} alt={image} /> */}
@@ -16,7 +19,7 @@ function CardA({id, name, image, brand, price, stock, rating, numReviews}) {
       <div>
         <h4>USD {price}</h4>
         {stock===0 ? 
-        <button disabled><FontAwesomeIcon icon={faCartShopping} /></button> : <button><FontAwesomeIcon icon={faCartShopping} /></button>}
+        <button disabled><FontAwesomeIcon icon={faCartShopping} /></button> : <button><FontAwesomeIcon icon={faCartShopping} onClick={()=>dispatch(addToCart({id, name, image, price, stock}))} /></button>}
       </div>
     </div>
   )
