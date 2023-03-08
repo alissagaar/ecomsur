@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faXmark} from '@fortawesome/free-solid-svg-icons'
 
-function CardB({id, name, image, brand, price, stock}) {
+function CardB({id, name, image, price, stock}) {
   const [quantity, setQuantity] = useState(1)
   return (
     <div>

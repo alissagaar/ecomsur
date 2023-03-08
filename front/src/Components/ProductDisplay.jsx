@@ -15,7 +15,7 @@ function ProductDisplay() {
   },[dispatch, id])
 
   return (
-    <div key={product._id}>
+    <div>
       <img src={`http://localhost:5000${product.image}`} alt={product.image} />
       <div>
         <span>{product.brand}</span>
