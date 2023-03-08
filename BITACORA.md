@@ -14,7 +14,7 @@ Componente ProductList
 1. Cuando se cargué este componente se busca que despaché la acción de getProducts y se muestre los 6 productos disponibles de la API.
 2. Comprobando que se trae la información correcta, se mapeó 'productList', para que por cada producto se mostrara su card respectiva(CardA).
 
-Componente CardA
+Componente CardA(1/2)
 1. Comenzamos definiendo que quiero mostrar en la card principal.
 2. Para que se muestren las estrellas del rating del producto, instalaré FontAwesome para que los íconos estén en formato SVG, tengan buena resolución y no se muestren pixeleados. (Se instaló en Front lo siguiente : npm i --save @fortawesome/fontawesome-svg-core  @fortawesome/free-solid-svg-icons @fortawesome/react-fontawesome @fortawesome/free-brands-svg-icons)
 
@@ -26,6 +26,9 @@ Componente CardB
 Componente ProductDisplay
 1. Para obtener la información específica de un producto se necesita conocer su 'id'. Por ello utilizamos el hook useParams de react-router-dom. Con este id reservado en una variable, se procede a despachar la acción getProductDetails(id).
 2. Con toda la información disponible, se completa la maquetación del componente con información de su imágen, nombre, marca, review, cantidad de reviews y su respectiva descripción.
+
+Componente CardA(2/2)
+1. Se agrega un onClick al botón de agregar al carrito, este va a despachar la función addToCart(producto) y se actualizará el estado del carrito.
 
 
 
