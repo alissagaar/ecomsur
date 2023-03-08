@@ -43,3 +43,26 @@ Componente NavBar
 Componente CardB(2/2)
 1. Se completó la función para eliminar el producto del carrito, agregando un onClick al botón que despacha la acción removeFromCart(id).
 
+___
+
+Estilos CSS
+
+Index.css
+1. Se inició con las configuraciones generales para facilitar los estilos posteriores.
+2. También se estableció la familia tipográfica de la página, Poppins. Para ello, se busco en Google Fonts y se copio el código en el <head> del index.html (línea 27-29).
+
+CardA
+1. Siguiento un estilo atómico, comenzamos por el componente más pequeño. Estableciendo jerarquías visuales de la info en base a tamaño y colores.
+
+ProductList
+1. Existen dos formas de organizar las cards en la página, grid y flex. Se decidió por flex.
+2. Una vez organizado las cards de productos y, para que no se viera tan vacío, se realizó un pequeño banner con un fondo degradado.
+3. El diseño es responsive.
+
+NavBar
+1. Completamos los estilos de la navbar. Agregando un color de fondo y quitanto los text-decoration de <a>. El estilo ahora se verá reflejado también en otros componentes que la utilicen.
+
+
+
+
+
