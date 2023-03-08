@@ -1,0 +1,21 @@
+.nav{
+    background-color: #2A55A3;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    height: 4rem;
+}
+
+.nav a:link , .nav a:visited {
+    text-decoration: none;
+}
+
+.nav h2, .nav h4{
+    margin: 0 2.2rem;
+    color: whitesmoke;
+}
+
+.nav h2{
+    font-size: 1.85rem;
+}
