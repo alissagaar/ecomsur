@@ -23,3 +23,9 @@ Componente CardB
 2. Se agregó unos botones para aumentar la cantidad de unidades que el usuario desee comprar. Si este quiere poner una cantidad menor a 1 o mayor al stock disponible del producto, los botones de desabilitaran e impediran esta acción.
 3. Se agregó el botón para eliminar a la card del carrito. Pendiente su funcionalidad en este momento.
 
+Componente ProductDisplay
+1. Para obtener la información específica de un producto se necesita conocer su 'id'. Por ello utilizamos el hook useParams de react-router-dom. Con este id reservado en una variable, se procede a despachar la acción getProductDetails(id).
+2. Con toda la información disponible, se completa la maquetación del componente con información de su imágen, nombre, marca, review, cantidad de reviews y su respectiva descripción.
+
+
+
