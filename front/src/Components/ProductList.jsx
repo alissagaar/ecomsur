@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { getProducts } from '../Redux/actions'
 import CardA from './CardA'
+import NavBar from './NavBar'
 
 function ProductList() {
 
@@ -14,6 +15,7 @@ function ProductList() {
 
   return (
     <div>
+      <NavBar/>
       Electronics
       {productList.length && productList.map(product => (<CardA
         key={product._id}

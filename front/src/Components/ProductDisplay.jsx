@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { useParams } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar, faStarHalfStroke} from '@fortawesome/free-solid-svg-icons'
+import NavBar from './NavBar'
 
 function ProductDisplay() {
   const dispatch = useDispatch()
@@ -16,6 +17,7 @@ function ProductDisplay() {
 
   return (
     <div>
+      <NavBar />
       <img src={`http://localhost:5000${product.image}`} alt={product.image} />
       <div>
         <span>{product.brand}</span>
