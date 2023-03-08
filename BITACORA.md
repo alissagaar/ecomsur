@@ -68,7 +68,12 @@ ProductDisplay
 2. En el proceso de estilo, se termino por decidir agregar el botón de agregar al carrito.
 
 CardB
+1. La diferencia en estilos de la CardA con la CardB es su orientación principal. En este caso es horizontal.
+2. Se agregaron las funcionalidades para que cuando se utilicen los botones + o menos, en vez de ver únicamente el cambio en el estado local, esta al clickearse despache o HandlePlus o HandleMinus.
 
+Cart
+1. Alineamos los CardB y le damos un espacio entre ellos.
+2. Completamos el empty state con una gráfica, mensaje y un botón que te redirige al ProductList.
 
 
 

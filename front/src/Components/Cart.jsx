@@ -3,9 +3,12 @@ import { useSelector } from 'react-redux'
 import CardB from './CardB'
 import NavBar from './NavBar'
 import s from './Cart.module.css'
+import { useNavigate } from 'react-router-dom'
 
 function Cart() {
   const cart = useSelector(state => state.cart)
+
+  const navigate= useNavigate()
 
   return (
     <div>
@@ -16,6 +19,7 @@ function Cart() {
         <div className={s.emptyCart}>
           <div></div>
           <h3>Oops! Your cart is empty</h3>
+          <button onClick={()=>navigate("/")}>Go Shopping</button>
         </div>:
         cart.map(product => (<CardB
           key={product.id}
