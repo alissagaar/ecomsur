@@ -61,6 +61,13 @@ ProductList
 
 NavBar
 1. Completamos los estilos de la navbar. Agregando un color de fondo y quitanto los text-decoration de <a>. El estilo ahora se verá reflejado también en otros componentes que la utilicen.
+2. Se puso un nombre hipotético a la página para que esta no diga 'Logo'.
+
+ProductDisplay
+1. Para que el diseño sea responsive en este caso se aplicó dos media queries para dispositivos de 400 y 500 px. La mayor diferencia es que la orientación del flex en desktok es row y, en responsive, column.
+2. En el proceso de estilo, se termino por decidir agregar el botón de agregar al carrito.
+
+
 
 
 

@@ -1,13 +1,14 @@
-.main{
+/* .main{
     background-color: #F4F5F9;
     height: 100vh;
-}
+} */
 
 .productList{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     gap: 1rem;
+    padding-bottom: 2.5rem;
 }
 
 .hero{

@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom'
 import ProductList from './Components/ProductList'
 import ProductDisplay from './Components/ProductDisplay'
 import Cart from './Components/Cart'
+import s from './App.module.css'
 
 const App = () => {
   // -------------------------------------------------
@@ -23,7 +24,7 @@ const App = () => {
   // -------------------------------------------------
 
   return (
-    <div>
+    <div className={s.main}>
       <Routes>
         <Route path='/' element={<ProductList/>} />
         <Route path='/:id' element={<ProductDisplay/>} />

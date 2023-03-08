@@ -15,7 +15,7 @@ function CardA({id, name, image, brand, price, stock, rating, numReviews}) {
 
   return (
     <div className={s.cardA}>
-      <img src={`http://localhost:5000${image}`} alt={image} />
+      <Link to={`/${id}`}><img src={`http://localhost:5000${image}`} alt={image} /></Link>
       <span>{brand}</span>
       <Link to={`/${id}`}><h3>{name}</h3></Link>
       <div className={s.rating}>
