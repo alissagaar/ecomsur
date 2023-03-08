@@ -1,7 +1,7 @@
 Resolución de Desafío
 
 Configuraciones Iniciales
-1. En la carpeta de Front se realizó la instalando complementaria de axios, redux,react-redux, redux-thunk y react-router-dom.
+1. En la carpeta de Front se realizó la instalación complementaria de axios,redux, react-redux, redux-thunk y react-router-dom.
 2. Primero se inició con el setting de Redux. Creando los archivos de store.js, reducer.js y las actions.js.
 3. En index.js se envolvió a la 'App' en un BrowserRouter para establecer las tres rutas principales del desafío. Y, a su vez, se envolvió a todo en un Provider para que el store sea accesible en toda la 'App'.
 4. En App.js se terminó definiendo las 3 rutas: (1) la que muestra todos los productos (2) la que muestra detalles de un producto en específico y (3) el carrito.
