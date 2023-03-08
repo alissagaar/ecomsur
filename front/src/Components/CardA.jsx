@@ -8,6 +8,7 @@ import s from './CardA.module.css'
 
 function CardA({id, name, image, brand, price, stock, rating, numReviews}) {
   const dispatch = useDispatch()
+  const numItems = 1
 
   //Checking there is no repeated item in the cart
   const cart = useSelector(state => state.cart)
@@ -27,7 +28,7 @@ function CardA({id, name, image, brand, price, stock, rating, numReviews}) {
         {stock===0 ? 
         <button disabled><FontAwesomeIcon icon={faCartShopping} />&nbsp;&nbsp;ADD TO CART</button> : 
         repeated ? <button><FontAwesomeIcon icon={faCartShopping} />&nbsp;&nbsp;ADD TO CART</button>:
-        <button onClick={()=>dispatch(addToCart({id, name, image, price, stock}))}><FontAwesomeIcon icon={faCartShopping}/>&nbsp;&nbsp;ADD TO CART</button>}
+        <button onClick={()=>dispatch(addToCart({id, name, image, price, stock, numItems}))}><FontAwesomeIcon icon={faCartShopping}/>&nbsp;&nbsp;ADD TO CART</button>}
       </div>
     </div>
   )

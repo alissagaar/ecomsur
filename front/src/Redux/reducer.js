@@ -26,6 +26,20 @@ export default function rootReducer(state= initialState, action){
                 ...state,
                 cart: state.cart.filter(product => product.id !== action.payload)
             }
+        case 'HANDLE_PLUS':
+            let productPlus = state.cart.find(p => p.id === action.payload)
+            if(productPlus) productPlus.numItems += 1
+            return {
+                ...state,
+                cart: [...state.cart] 
+            }
+        case 'HANDLE_MINUS':
+            let productMinus = state.cart.find(p => p.id === action.payload)
+            if(productMinus) productMinus.numItems -= 1
+            return {
+                ...state,
+                cart: [...state.cart] 
+            }
         default:
             return {...state};
     }

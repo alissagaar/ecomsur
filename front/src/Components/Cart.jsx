@@ -2,6 +2,7 @@ import React from 'react'
 import { useSelector } from 'react-redux'
 import CardB from './CardB'
 import NavBar from './NavBar'
+import s from './Cart.module.css'
 
 function Cart() {
   const cart = useSelector(state => state.cart)
@@ -9,12 +10,12 @@ function Cart() {
   return (
     <div>
       <NavBar/>
-      <h2>Cart</h2>
-      <div>
+      <h2 className={s.page}>Cart</h2>
+      <div className={s.cartContent}>
       {!cart.length? 
-        <div>
-          {/* <img src="" alt="" /> */}
-          <h5>Oops! Your cart is empty</h5>
+        <div className={s.emptyCart}>
+          <div></div>
+          <h3>Oops! Your cart is empty</h3>
         </div>:
         cart.map(product => (<CardB
           key={product.id}
@@ -23,6 +24,7 @@ function Cart() {
           image={product.image}
           price={product.price}
           stock={product.stock}
+          numItems={product.numItems}
         />))
       }
       </div>

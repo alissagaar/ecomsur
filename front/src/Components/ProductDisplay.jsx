@@ -17,6 +17,7 @@ function ProductDisplay() {
     const cart = useSelector(state => state.cart)
     const repeated = cart.find(product => product.id === id)
 
+  const numItems = 1
   useEffect(()=>{
     dispatch(getProductDetails(id))
   },[dispatch, id])
@@ -38,7 +39,7 @@ function ProductDisplay() {
           {product.countInStock===0 ? 
           <button disabled><FontAwesomeIcon icon={faCartShopping} />&nbsp;&nbsp;ADD TO CART</button> : 
           repeated ? <button><FontAwesomeIcon icon={faCartShopping} />&nbsp;&nbsp;ADD TO CART</button>:
-          <button onClick={()=>dispatch(addToCart({id:product._id, name: product.name, image:product.image, price:product.price, stock:product.countInStock}))}><FontAwesomeIcon icon={faCartShopping}/>&nbsp;&nbsp;ADD TO CART</button>}
+          <button onClick={()=>dispatch(addToCart({id:product._id, name: product.name, image:product.image, price:product.price, stock:product.countInStock, numItems}))}><FontAwesomeIcon icon={faCartShopping}/>&nbsp;&nbsp;ADD TO CART</button>}
         </div>
       </div>
     </div>

@@ -1,0 +1,65 @@
+.cardB{
+    display: flex;
+    width: 21rem;
+    border-radius: 0.85rem;
+    background-color: white;
+}
+
+.cardB img{
+    width: 10rem;
+    border-radius: 0.85rem 0 0 0.85rem;
+}
+
+.order{
+    width: 9.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.order h5{
+    font-size: 0.85rem;
+    margin: 0 0.5rem;
+    margin-top: 1rem;
+    line-height: 1rem;
+    color: #585858;
+}
+
+.order h4{
+    margin: 0 0.5rem;
+    color: #1B2F47;
+}
+
+.items button, .items button:disabled {
+    margin: 0 0.5rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    border: none;
+    border-radius: 0.25rem;
+}
+
+.items button{
+    background-color: #2A55A3;
+    color: whitesmoke;
+}
+
+.items button:hover{
+    background-color: #1D3F7B;
+    cursor: pointer;
+}
+
+.items button:disabled{
+    background-color: #7B95C4;
+    color: #dedede;
+}
+
+.remove{
+    border: none;
+    background: transparent;
+    font-size: 1.15rem;
+    height: 2.15rem;
+    color: #2A55A3;
+}
+
+.remove:hover{
+    cursor: pointer;
+}

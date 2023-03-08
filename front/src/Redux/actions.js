@@ -42,3 +42,16 @@ export const addToCart = (product) =>{
 export const removeFromCart = (id) =>{
     return { type: REMOVE_FROM_CART, payload: id };
 }
+
+
+// extra
+const HANDLE_PLUS= 'HANDLE_PLUS'
+const HANDLE_MINUS= 'HANDLE_MINUS'
+
+export const handlePlus = (id) => {
+    return { type: HANDLE_PLUS, payload: id}
+}
+
+export const handleMinus = (id) => {
+    return { type: HANDLE_MINUS, payload: id}
+}
