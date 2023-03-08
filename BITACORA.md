@@ -1,3 +1,4 @@
+Desarrolladora FrontEnd: Alissa Gamarra Arrieta
 El proyecto se inicializa con 'npm run dev'
 
 Resolución de Desafío
@@ -74,7 +75,7 @@ CardB
 2. Se agregaron las funcionalidades para que cuando se utilicen los botones + o menos, en vez de ver únicamente el cambio en el estado local, esta al clickearse despache o HandlePlus o HandleMinus.
 
 Cart
-1. Alineamos los CardB y le damos un espacio entre ellos.
+1. Alineamos los CardB y le damos un espacio entre cada CardB.
 2. Completamos el empty state con una gráfica, mensaje y un botón que te redirige al ProductList.
 
 
