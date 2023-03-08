@@ -18,7 +18,7 @@ Componente CardA(1/2)
 1. Comenzamos definiendo que quiero mostrar en la card principal.
 2. Para que se muestren las estrellas del rating del producto, instalaré FontAwesome para que los íconos estén en formato SVG, tengan buena resolución y no se muestren pixeleados. (Se instaló en Front lo siguiente : npm i --save @fortawesome/fontawesome-svg-core  @fortawesome/free-solid-svg-icons @fortawesome/react-fontawesome @fortawesome/free-brands-svg-icons)
 
-Componente CardB
+Componente CardB(1/2)
 1. Se completó la maquetación de la CardB. Este será la card que se muestre en la ruta '/cart', tiene solo la información  más relevante como la imagen, nombre de producto y precio.
 2. Se agregó unos botones para aumentar la cantidad de unidades que el usuario desee comprar. Si este quiere poner una cantidad menor a 1 o mayor al stock disponible del producto, los botones de desabilitaran e impediran esta acción.
 3. Se agregó el botón para eliminar a la card del carrito. Pendiente su funcionalidad en este momento.
@@ -30,5 +30,15 @@ Componente ProductDisplay
 Componente CardA(2/2)
 1. Se agrega un onClick al botón de agregar al carrito, este va a despachar la función addToCart(producto) y se actualizará el estado del carrito.
 
+Componente Cart
+1. Traemos la información sobre los productos que se encuentran en el carrito. Si este está vacío, avisara al usuario sobre ello. Caso contrario mapeará todos los productos se encuentren en la cart por una CardB pasandole las siguientes props: id, name, image, price, stock.
+2. Pendiente la imagen para el empty state.
 
+Componente NavBar
+1. El navBar es sencillo. Unicamente tiene el logo(que al hacer click redirecciona al componente Product List) y información de cantidad de items del carrito(también, sí se hace click, el usuario será llevado a la ruta del carrito)
+2. Ahora que el carrito tiene cierta cantidad de productos, este puede mostrar dinámicamente su cantidad en el navBar. Empleamos el hook de react-redux useSelector para traer la información del carrito y modificamos el '0' por la longitud del array del carrito.
+3. Lo agregamos al inicio de los componentes ProductList, ProductDisplay y Cart
+
+Componente CardB(2/2)
+1. Se completó la función para eliminar el producto del carrito, agregando un onClick al botón que despacha la acción removeFromCart(id).
 
