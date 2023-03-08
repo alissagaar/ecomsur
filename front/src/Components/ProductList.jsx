@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { getProducts } from '../Redux/actions'
 import CardA from './CardA'
 import NavBar from './NavBar'
+import s from './ProductList.module.css'
 
 function ProductList() {
 
@@ -14,9 +15,13 @@ function ProductList() {
   },[dispatch])
 
   return (
-    <div>
+    <div className={s.main}>
       <NavBar/>
-      <h2>Electronics</h2>
+      <div className={s.hero}>
+        <h2>Electronics</h2>
+        <div>Pronto<br /><em>Black Friday</em></div>
+      </div>
+      <div className={s.productList}>
       {productList.length && productList.map(product => (<CardA
         key={product._id}
         id={product._id}
@@ -28,6 +33,7 @@ function ProductList() {
         rating={product.rating}
         numReviews={product.numReviews}
       />))}
+      </div>
     </div>
   )
 }

@@ -1,0 +1,37 @@
+.main{
+    background-color: #F4F5F9;
+    height: 100vh;
+}
+
+.productList{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 1rem;
+}
+
+.hero{
+    margin: 1.35rem 2.2rem;
+}
+
+.hero div{
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    background: linear-gradient(270deg, #37AB7C 0%, #2A55A3 71.88%);
+    height: 12rem;
+    width: 100%;
+    border-radius: 0.85rem;
+    color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
+.hero div em{
+    background: black;
+    padding: 0 1rem;
+    border-radius: 0.5rem;
+}
